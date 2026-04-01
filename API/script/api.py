@@ -6,9 +6,10 @@ import os  # Interaction avec le système
 
 API_KEY = "a28db3a7-7c19-4721-b1c7-bb5c76250566"  # Variable globale qui sera la clef d'authentification de l'API
 BASE_URL = "https://api.datatourisme.fr/v1/catalog"  # L'url de base de l'API
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-OUTPUT_DIR = "data_raw_ndjson"  # Dossier de sauvegarde des données brutes au format NDJSON
-STATE_FILE = "checkpoint.json"  # Fichier qui garde la progression de l'extraction pour pouvoir reprendre en cas d'arrêt
+OUTPUT_DIR = os.path.join(BASE_DIR, "..", "data_raw_ndjson") # Dossier de sauvegarde des données brutes au format NDJSON
+STATE_FILE = os.path.join(BASE_DIR, "..", "checkpoint.json")  # Fichier qui garde la progression de l'extraction pour pouvoir reprendre en cas d'arrêt
 
 PAGES_PER_FILE = 200  # Nombre de pages à stocker dans un même fichier
 PAGE_SIZE = 250  # Nombre d'objets demandés par page à l'API
