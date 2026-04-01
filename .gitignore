@@ -2,4 +2,5 @@
 API/env_algo
 
 #Cache
+API/__pycache__/
 API/script/__pycache__/
