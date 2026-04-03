@@ -1,6 +1,5 @@
 <h1>Project</h1>
-
-<h2><strong>School project to emulate Airbnb</strong></h2>
+<h2>School project to emulate Airbnb</h2>
 
 <p>To emulate Airbnb as closely as possible, we need to collect tourism-related data. We must use open datas from https://www.data.gouv.fr/
 <br>
@@ -11,11 +10,10 @@ Here are the API documentation links:
 https://api.datatourisme.fr/v1/docs
 <br>
 https://api.datatourisme.fr/v1/swagger/</p>
-<br>
 
-<h2><strong>How to get an API's KEY</strong></h2>
+<h2>How to get an API's KEY</h2>
 <h3>Authentication Key Acquisition</h3>
-<br>
+
 <p>Get your key at https://info.datatourisme.fr/utiliser-les-donnees
 <br>
 The API uses a unique authentication key to secure requests. You can provide this key in two ways.
@@ -35,6 +33,46 @@ Add the key as the api_key parameter in the URL of your request.
 <code>GET /v1/catalog?api_key=your_unique_api_key</code></p>
 
 
-<h2><strong>How to use the API's KEY</strong></h2>
+<h2>How to use the API's KEY</h2>
+<p>Create a .env file in the root of your project and add it your key :
+  <br>
+  <br>
+  <strong>Linux</strong>
+    <br>
+    <code>echo "API_KEY=your_unique_api_key" > .env</code>
+    <br>
+    <br>
+  <strong>Windows</strong>
+  <br>
+  <code>echo API_KEY=your_api_key > .env</code>
+  <br>
+  <br>
+  <strong>Make sure .env is added to your .gitignore</strong></p>
+
+<h2>Installation</h2>
+<h3>Clone the repository:</h3>
+
+<code>git clone https://github.com/Algo-dev-ynov/Project/
+  cd https://github.com/Algo-dev-ynov/Project/</code>
+
+<h3>Create and activate a virtual environment</h3>
+
+<code>python -m venv venv</code>
+
+<strong>Linux</strong>
 <br>
-<p>Create a .env file in the root of your project, then add this variable : <code>API_KEY=your_unique_api_key</code></p>
+<code>source venv/bin/activate</code>
+
+<strong>Windows</strong>
+<br>
+<code>venv\Scripts\activate</code>
+
+<h3>Install dependencies</h3>
+<strong>Linux</strong>
+<br>
+<code>pip3 install -r requirement.txt</code>
+<br>
+<br>
+<strong>Windows</strong>
+<br>
+<code>pip install -r requirement.txt</code>
