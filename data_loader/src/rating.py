@@ -1,5 +1,3 @@
-"""Rating extraction and generation module"""
-
 import random
 from typing import Dict, Any, List, Tuple
 from pymongo.errors import BulkWriteError
