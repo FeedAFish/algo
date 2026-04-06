@@ -3,5 +3,10 @@ env_airbnb
 .env
 
 #Cache
-API/__pycache__/
-API/script/__pycache__/
+*/__pycache__/
+
+
+.*
+!.gitignore
+
+API/data_raw_ndjson/
