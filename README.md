@@ -76,3 +76,52 @@ Add the key as the api_key parameter in the URL of your request.
 <strong>Windows</strong>
 <br>
 <code>pip install -r requirement.txt</code>
+
+<h2>MongoDB Setup and Data Loading</h2>
+
+<h3>1. Start MongoDB Service</h3>
+<p>Run MongoDB using Docker Compose:
+<br>
+<code>docker-compose up mongodb</code>
+<br>
+This starts MongoDB locally on <code>localhost:27017</code></p>
+
+<h3>2. Download Raw Data</h3>
+<p>If you don't want to re-run the scraping from the API, download the pre-scraped data:
+<br>
+<strong>Download Link:</strong> <a href="https://drive.google.com/file/d/1rsxMfRzyVyzccLkRFxgwpKknGCqvcR1a/view?usp=sharing">DATAtourisme Data (Google Drive)</a>
+<br>
+<br>
+Extract the downloaded file and place it in the project:
+<br>
+<code>./API/data_raw_ndjson/</code></p>
+
+<h3>3. Load Data into MongoDB</h3>
+<p>Run the data loader to process and insert data into MongoDB:
+<br>
+<code>python data_loader</code>
+<br>
+<br>
+This will:
+<br>
+- Step 1: Read raw data from <code>./API/data_raw_ndjson/</code> and insert into <code>place_raw</code>
+<br>
+- Step 2: Transform and clean data, insert into <code>place_clean</code>
+<br>
+- Step 3: Generate ratings (11 loops with varying coverage)
+<br>
+<br>
+You can skip to a specific step using:
+<br>
+<code>python -m data_loader 2</code> (skip step 1, start from step 2)
+<br>
+<code>python -m data_loader 3</code> (skip steps 1-2, only generate ratings)</p>
+
+<h3>4. View Data</h3>
+<p>Connect to MongoDB at <code>mongodb://root:root@localhost:27017/</code> using MongoDB Compass to view data in the <code>tourisme_data</code> database with collections:
+<br>
+- <code>place_raw</code>: Original raw data from the API
+<br>
+- <code>place_clean</code>: Cleaned, structured data with fields: _id, label, type, geo, address, description, contact, price, uuid, uri
+<br>
+- <code>place_ratings</code>: Ratings data with fields: uuid, rating (1-5), comment</p>
