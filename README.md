@@ -103,15 +103,18 @@ Extract the downloaded file and place it in the project:
 <br>
 This will:
 <br>
-- Read raw data from <code>./API/data_raw_ndjson/</code>
+- Read raw data from <code>./API/data_raw_ndjson/</code> (Step 1)
 <br>
 - Transform and structure the data
 <br>
-- Insert into MongoDB <code>tourisme_data</code> database with two collections:
+- Insert into MongoDB <code>tourisme_data</code> database with two collections (Step 2):
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;- <code>place_raw</code>: Original raw data from the API
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;- <code>place_clean</code>: Cleaned and structured data</p>
+- Add ratings randomized for demonstration. (Step 3)
+
+**Note :** You can add a number after the command to skip directly to another step (ex. <code>python data_loader 3</code>)
 
 <h3>4. View Data</h3>
 <p>Connect to MongoDB at <code>mongodb://root:root@localhost:27017/</code> using any MongoDB client (e.g., MongoDB Compass) to view the data in the <code>tourisme_data</code> database.</p>
