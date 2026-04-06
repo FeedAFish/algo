@@ -9,15 +9,13 @@ services:
     command: python main.py
 
   mongodb:
+    container_name: algo-mongodb
     image: mongo:latest
-    container_name: mongodb
     ports:
       - "27017:27017"
+    volumes:
+      - .docker/mongodb:/data/db
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: root
-      MONGO_INITDB_DATABASE: tourisme_data
-    volumes:
-      - .docker/mongodb:/data/db
-    networks:
-      - app-network
+    restart: always
