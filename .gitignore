@@ -9,5 +9,3 @@ __pycache__/
 
 .*
 !.gitignore
-
-API/data_raw_ndjson/
