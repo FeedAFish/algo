@@ -2,6 +2,7 @@ from typing import Dict, Any, List
 from collections import defaultdict
 from pymongo.errors import BulkWriteError
 from .mongo import MongoConnection
+from random import randint
 
 
 class DictFlattener:
@@ -61,6 +62,7 @@ class StructuredDataExtractor:
             "address": None,
             "description": None,
             "contact": None,
+            "price": None,
             "uuid": record.get("uuid", "N/A"),
             "uri": record.get("uri", "N/A"),
         }
@@ -101,6 +103,8 @@ class StructuredDataExtractor:
                 "homepage": contact.get("0_homepage"),
             }
 
+        # Add randomized price for demonstration (since original data doesn't have price)
+        extracted["price"] = randint(0, 100)
         return extracted
 
     def extract_from_records(
