@@ -4,7 +4,8 @@ env_airbnb
 
 #Cache
 */__pycache__/
-
+__pycache__/
+*.pyc
 
 .*
 !.gitignore
