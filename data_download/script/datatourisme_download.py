@@ -6,7 +6,7 @@ import os  # Interaction avec le système
 from pathlib import Path
 
 
-class Api:
+class DatatoursimeDownload:
 	def __init__(self,api_key,url_api,path_output,path_state,page_file,page_size,time_sleep):
 		self.api_key = api_key
 		self.url_api = url_api
