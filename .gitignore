@@ -3,5 +3,9 @@ env_airbnb
 .env
 
 #Cache
-API/__pycache__/
-API/script/__pycache__/
+*/__pycache__/
+__pycache__/
+*.pyc
+
+.*
+!.gitignore
