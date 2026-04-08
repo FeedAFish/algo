@@ -1,11 +1,9 @@
 # Environnement
 env_airbnb
-.env
 
 #Cache
 */__pycache__/
 __pycache__/
-*.pyc
 
 .*
 !.gitignore
