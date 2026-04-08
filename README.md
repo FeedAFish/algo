@@ -39,12 +39,12 @@ Add the key as the api_key parameter in the URL of your request.
   <br>
   <strong>Linux</strong>
     <br>
-    <code>echo "API_KEY=your_unique_api_key" > .env</code>
+    <code>echo "export API_KEY=your_unique_api_key" > .env</code>
     <br>
     <br>
   <strong>Windows</strong>
   <br>
-  <code>echo API_KEY=your_api_key > .env</code>
+  <code>echo export API_KEY=your_api_key > .env</code>
   <br>
   <br>
   <strong>Make sure .env is added to your .gitignore</strong></p>
@@ -81,7 +81,17 @@ cd Project</code>
 <br>
 
 <h2>Creating a reproducible setup with Docker</h2>
-
+<h3>How to give the API's key to the env :</h3>
+<p>
+  <strong>Linux</strong>
+  <br>
+  <code>export API_KEY=your_unique_api_key</code>
+  <br>
+  <br>
+  <strong>Windows</strong>
+  <br>
+  <code>set API_KEY=your_unique_api_key</code>
+</p>
 <h3>How to start the docker :</h3>
 <p>This command create an env
 <br>
@@ -90,9 +100,15 @@ cd Project</code>
 <br>
 You must run the next command to start the download that will create the data lake :<br>
 <code>docker compose -f docker-compose_downloader.yml exec -it airbnb python3 -m data_download</code></p>
+
+<h3>Unitest and deploiyment test :</h3>
+<p>This command runs unitest and deployment test
+<br>
+<code>docker compose -f docker-compose_downloader.yml exec -it airbnb pytest</code></p>
 <br>
 <br>
 <br>
+
 
 <h2>MongoDB Setup and Data Loading</h2>
 
