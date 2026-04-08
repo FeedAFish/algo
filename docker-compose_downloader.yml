@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+ airbnb:
+  build:
+   context: .
+   dockerfile: Dockerfile_downloader
+  container_name: ynov_airbnb
+  volumes:
+   - .:/airbnb
+  working_dir: /airbnb
+  environment:
+   - API_KEY=${API_KEY}
+  tty: true
+  stdin_open: true
