@@ -12,7 +12,7 @@ https://api.datatourisme.fr/v1/docs
 https://api.datatourisme.fr/v1/swagger/</p>
 
 <h2>How to get an API's KEY</h2>
-<h3>Authentication Key Acquisition</h3>
+<h3>Authentication Key Acquisition :</h3>
 
 <p>Get your key at https://info.datatourisme.fr/utiliser-les-donnees
 <br>
@@ -50,14 +50,12 @@ Add the key as the api_key parameter in the URL of your request.
   <strong>Make sure .env is added to your .gitignore</strong></p>
 
 <h2>Installation</h2>
-<h3>Clone the repository:</h3>
-
-
+<h3>Clone the repository :</h3>
 <code>git clone https://github.com/Algo-dev-ynov/Project.git
 <br>
-cd Project</code
+cd Project</code>
 
-<h3>Create and activate a virtual environment</h3>
+<h3>Create and activate a virtual environment :</h3>
 
 <code>python -m venv venv</code>
 
@@ -68,8 +66,9 @@ cd Project</code
 <strong>Windows</strong>
 <br>
 <code>venv\Scripts\activate</code>
+<br>
 
-<h3>Install dependencies</h3>
+<h3>Install dependencies :</h3>
 <strong>Linux</strong>
 <br>
 <code>pip3 install -r requirement.txt</code>
@@ -81,18 +80,16 @@ cd Project</code
 <br>
 <br>
 
-<h3>Creating a reproducible setup with Docker<h3>
+<h2>Creating a reproducible setup with Docker</h2>
 
-<p><strong>How to start the docker<strong></p>
-<br>
+<h3>How to start the docker :</h3>
+<p>This command create an env
 <br>
 <code>docker compose -f docker-compose_downloader.yml up -d</code>
 <br>
 <br>
-<p>This command create env, you must run the next command to start the download that will create the data lake :</p>
-<br>
-<br>
-<code>docker compose -f docker-compose_downloader.yml exec -it airbnb python3 -m data_download</code>
+You must run the next command to start the download that will create the data lake :<br>
+<code>docker compose -f docker-compose_downloader.yml exec -it airbnb python3 -m data_download</code></p>
 <br>
 <br>
 <br>
