@@ -78,6 +78,24 @@ cd Project</code
 <strong>Windows</strong>
 <br>
 <code>pip install -r requirement.txt</code>
+<br>
+<br>
+
+<h3>Creating a reproducible setup with Docker<h3>
+
+<p><strong>How to start the docker<strong></p>
+<br>
+<br>
+<code>docker compose -f docker-compose_downloader.yml up -d</code>
+<br>
+<br>
+<p>This command create env, you must run the next command to start the download that will create the data lake :</p>
+<br>
+<br>
+<code>docker compose -f docker-compose_downloader.yml exec -it airbnb python3 -m data_download</code>
+<br>
+<br>
+<br>
 
 <h2>MongoDB Setup and Data Loading</h2>
 
