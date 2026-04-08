@@ -16,7 +16,7 @@ class RawDataInsert(MongoConnection):
     def _get_data_directory(self) -> Path:
         current_file = Path(__file__)
         project_root = current_file.parent.parent.parent
-        data_dir = project_root / "API" / "data_raw_ndjson"
+        data_dir = project_root / "data_lake"
 
         if not data_dir.exists():
             raise FileNotFoundError(f"Data directory not found: {data_dir}")

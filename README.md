@@ -124,10 +124,7 @@ This starts MongoDB locally on <code>localhost:27017</code></p>
 <br>
 <strong>Download Link:</strong> <a href="https://drive.google.com/file/d/1rsxMfRzyVyzccLkRFxgwpKknGCqvcR1a/view?usp=sharing">DATAtourisme Data (Google Drive)</a>
 <br>
-<br>
-Extract the downloaded file and place it in the project:
-<br>
-<code>./API/data_raw_ndjson/</code></p>
+
 
 <h3>3. Load Data into MongoDB</h3>
 <p>Run the data loader to process and insert data into MongoDB:
