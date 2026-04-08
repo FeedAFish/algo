@@ -22,13 +22,22 @@
 
 <h2>Tree</h2>
 
-<p>
-<code>.
-  ├── __main__.py # Entry point of the application
-  ├── README.md
-  └── script # Folder containing all Python scripts
-      ├── datatourisme_download.py # Download raw data from the DATAtourisme API
-      ├── __init__.py
-      └── picture.py # Download images from raw data</code>
-</p>
+<p><code>.
+├── doc # Folder containing all Python doc
+│   ├── downloader
+│   │   ├── datatourisme_download.html
+│   │   └── picture.html
+│   ├── downloader.html
+│   ├── index.html
+│   └── search.js
+├── downloader # Folder containing all Python scripts
+│   ├── datatourisme_download.py # Download raw data from the DATAtourisme API
+│   ├── __init__.py
+│   └── picture.py # Download images from raw data
+├── __main__.py # Entry point of the application
+├── README.md
+└── tests # Folder containign all Python tests
+    ├── test_deployment_datatourisme_download.py
+    └── test_unit_datatourisme_download.py
+</code></p>
 
