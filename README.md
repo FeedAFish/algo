@@ -52,8 +52,10 @@ Add the key as the api_key parameter in the URL of your request.
 <h2>Installation</h2>
 <h3>Clone the repository:</h3>
 
-<code>git clone https://github.com/Algo-dev-ynov/Project/
-  cd https://github.com/Algo-dev-ynov/Project/</code>
+
+<code>git clone https://github.com/Algo-dev-ynov/Project.git
+<br>
+cd Project</code
 
 <h3>Create and activate a virtual environment</h3>
 
